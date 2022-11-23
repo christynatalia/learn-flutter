@@ -15,18 +15,13 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.green[500],
       ),
-      body: Center(
-        child: Text(
-          'hello ninjas',
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 2.0,
-            color: Colors.green[500],
-            fontFamily: 'IndieFlower',
-          ),
-        ),
-      ),
+      body: Container(
+        padding: EdgeInsets.fromLTRB(20, 10, 5, 15),
+        margin: EdgeInsets.all(10),
+        color: Colors.green[500],
+        child: Text('hi'),
+
+    ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
         child: Text('clickk'),
