@@ -15,13 +15,10 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.green[500],
       ),
-      body: Container(
-        padding: EdgeInsets.fromLTRB(20, 10, 5, 15),
-        margin: EdgeInsets.all(10),
-        color: Colors.green[500],
-        child: Text('hi'),
-
-    ),
+      body: Padding(
+        padding: EdgeInsets.all(90.0),
+        child: Text("minion"),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
         child: Text('clickk'),
