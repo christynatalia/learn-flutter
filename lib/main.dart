@@ -15,30 +15,50 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.green[500],
       ),
-      body: Row(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('hello, world'),
-          TextButton.icon(
-            label: Text(
-                'click me',
-              style: TextStyle(
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 2.0,
-                color: Colors.green[500],
-                fontFamily: 'IndieFlower',
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                color: Colors.cyan,
+                child: Text('one'),
               ),
-            ),
-            onPressed: (){},
-            style: TextButton.styleFrom(
-              backgroundColor: Colors.grey[300],
-            ),
-            icon: Icon(
-                Icons.abc_outlined,
-                color: Colors.black,
-            ),
+              Text('hello, world'),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Image(
+                image: AssetImage('assets/picture1.jpg'),
+                height: 300,
+                width: 100
+              ),
+              TextButton.icon(
+                label: Text(
+                  'click me',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 2.0,
+                    color: Colors.green[500],
+                    fontFamily: 'IndieFlower',
+                  ),
+                ),
+                onPressed: (){},
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.grey[300],
+                ),
+                icon: Icon(
+                  Icons.abc_outlined,
+                  color: Colors.black,
+                ),
+              ),
+
+            ],
           ),
           Container(
             color: Colors.cyan[300],
@@ -47,6 +67,8 @@ class Home extends StatelessWidget {
           ),
         ],
       ),
+
+
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
         child: Text('clickk'),
