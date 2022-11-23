@@ -15,9 +15,37 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.green[500],
       ),
-      body: Padding(
-        padding: EdgeInsets.all(90.0),
-        child: Text("minion"),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text('hello, world'),
+          TextButton.icon(
+            label: Text(
+                'click me',
+              style: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 2.0,
+                color: Colors.green[500],
+                fontFamily: 'IndieFlower',
+              ),
+            ),
+            onPressed: (){},
+            style: TextButton.styleFrom(
+              backgroundColor: Colors.grey[300],
+            ),
+            icon: Icon(
+                Icons.abc_outlined,
+                color: Colors.black,
+            ),
+          ),
+          Container(
+            color: Colors.cyan[300],
+            padding: EdgeInsets.all(30.0),
+            child: Text('inside container'),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
