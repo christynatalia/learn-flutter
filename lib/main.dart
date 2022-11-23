@@ -15,59 +15,37 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.green[500],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: Row(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Container(
-                color: Colors.cyan,
-                child: Text('one'),
-              ),
-              Text('hello, world'),
-            ],
+          Expanded(
+              child: Image.asset('assets/picture2.jpg'),
+              flex: 2),
+          Expanded(
+            flex: 3,
+            child: Container(
+              padding: EdgeInsets.all(30),
+              color: Colors.cyan,
+              child: Text('1'),
+            ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Image(
-                image: AssetImage('assets/picture1.jpg'),
-                height: 300,
-                width: 100
-              ),
-              TextButton.icon(
-                label: Text(
-                  'click me',
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 2.0,
-                    color: Colors.green[500],
-                    fontFamily: 'IndieFlower',
-                  ),
-                ),
-                onPressed: (){},
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.grey[300],
-                ),
-                icon: Icon(
-                  Icons.abc_outlined,
-                  color: Colors.black,
-                ),
-              ),
-
-            ],
+          Expanded(
+            flex:2,
+            child: Container(
+              padding: EdgeInsets.all(30),
+              color: Colors.limeAccent,
+              child: Text('2'),
+            ),
           ),
-          Container(
-            color: Colors.cyan[300],
-            padding: EdgeInsets.all(30.0),
-            child: Text('inside container'),
+          Expanded(
+            flex:1,
+            child: Container(
+              padding: EdgeInsets.all(30),
+              color: Colors.red,
+              child: Text('3'),
+            ),
           ),
         ],
       ),
-
 
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
